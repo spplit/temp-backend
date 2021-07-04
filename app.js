@@ -100,7 +100,7 @@ const cards = [
     phone : "010-3000-1000",
     email : "yourmail@naver.com",
     tags : ["Study", "King", "Master"],
-    notes : "Hana Bank Department Manager",
+    notes : "Consultation about math class at the main building at 3pm.",
     imgUrl : "https://i.pinimg.com/originals/3b/7b/73/3b7b7373803859ebd471c784bf2b8819.png"
   },
   {
@@ -149,11 +149,35 @@ const cards = [
   }  
 ];
 
+const mycards = [  {
+  id: 0,
+  division: "Work",
+  name : "Mango Kim",
+  job : "Frontend Developer",
+  phone : "010-1234-5678",
+  email : "mango123@gmail.com",
+  tags : ["Kakao", "React", "Kotlin"],
+  notes : "3pm meeting with Google",
+  imgUrl : "https://file2.nocutnews.co.kr/newsroom/image/2015/10/06/20151006090004712617.jpg"
+},
+{
+  id: 1,
+  division: "Bookmark",
+  name : "Mango Kim",
+  job : "Student",
+  phone : "010-8921-9552",
+  email : "mango@hanyang.ac.kr",
+  tags : ["TOEFL", "IBT", "Develop"],
+  notes : "Head Leader of HYU likelion SweetFactory",
+  imgUrl : "https://i.pinimg.com/originals/09/ed/e7/09ede7fd884ad8acc0031c7e5a24756f.png"
+}];
+
 
 app.use(cors());
 app.options("*", cors());
 
 app.get("/", (req, res) => res.send("Hello World!"));
 app.get("/cards", (req, res) => res.json(cards));
+app.get("/mycards", (req, res) => res.json(mycards));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
